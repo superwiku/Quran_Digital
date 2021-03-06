@@ -8,4 +8,8 @@ import retrofit2.http.GET;
 public interface PengaturRv {
     @GET("data")
     Call<List<Surat>> ambilSurat();
+
+    @GET("surah/{nomor}")
+    Call<Ayat> getDaftarAyat();
+
 }
