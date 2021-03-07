@@ -1,6 +1,8 @@
 package com.example.qurandigital;
 
-public class Verses {
+import java.io.Serializable;
+
+public class Verses implements Serializable {
     private int number;
     private String text;
     private String translation_id;

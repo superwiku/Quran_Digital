@@ -4,61 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGreen"
+    android:background="@drawable/backdetail"
     tools:context=".DetailActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backdetail"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        android:background="@drawable/gradnya"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/view2"
-        android:layout_width="175dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:alpha="0.5"
-        android:background="@color/colorGreen"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nama2" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/view2"
-        android:layout_width="175dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:alpha="0.5"
-        android:background="@color/colorGreen"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nama2" />
 
     <TextView
         android:id="@+id/txt_asma2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="TextView"
         android:textColor="@color/colorKuning"
         android:textSize="20pt"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -72,9 +50,159 @@
         android:gravity="center"
         android:text="textnama"
         android:textColor="@color/colorPutih"
-        android:textSize="14pt"
+        android:textSize="18pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_asma2" />
+
+    <TextView
+        android:id="@+id/txt_terjemah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="textterjemah"
+        android:textColor="@color/colorPutih"
+        android:textSize="14pt"
+        android:fontFamily="@font/malema"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nama2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quikley"
+        android:text="Golongan Surat :"
+        android:textColor="@color/colorPutih"
+        android:textSize="14pt"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/txt_terjemah" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quikley"
+        android:text="Golongan Surat"
+        android:textColor="@color/colorPutih"
+        android:textSize="14pt"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:background="@color/colorGreen"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorKuning"
+            android:fontFamily="@font/quikley"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="NOMOR SURAT :"
+            android:textColor="@color/colorBlack"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nomor_surat_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/colorBlack"
+            android:textSize="32dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view3"
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.7"
+        android:background="@color/colorGreen"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorKuning"
+            android:fontFamily="@font/quikley"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="JUMLAH AYAT :"
+            android:textColor="@color/colorBlack"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_jml_ayat_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:gravity="center"
+            android:text="123"
+            android:textColor="@color/colorBlack"
+            android:textSize="32dp" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        android:text="iqro"
+        android:textColor="@color/colorKuning"
+        android:textSize="14pt"
+        app:layout_constraintEnd_toEndOf="@+id/img_iqro"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/img_iqro"
+        app:layout_constraintTop_toTopOf="@+id/img_iqro" />
+
+    <ImageView
+        android:id="@+id/img_iqro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0.7"
+        android:background="@drawable/button"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/img_bottom"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
