@@ -1,0 +1,1 @@
+ini aplikasi Al Quran
